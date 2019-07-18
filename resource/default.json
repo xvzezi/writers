@@ -1,0 +1,22 @@
+{
+    "book":"Magic World",
+    "author":"Sturmfy",
+    "startDate":"Date.now()",
+    "updateDate":"Date.now()",
+    "chapters":[
+        {
+            "name":"fly",
+            "index":1,
+            "path":"1-fly.txt"
+        }
+    ],
+    "sections":[
+        {
+            "name":"axin",
+            "index":1,
+            "chapters":[
+                1
+            ]
+        }
+    ]
+}

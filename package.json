@@ -10,14 +10,36 @@
 		"Other"
 	],
 	"activationEvents": [
-		"onCommand:extension.helloWorld"
+		"workspaceContains:.writers",
+		"onCommand:extension.createBook"
 	],
 	"main": "./out/extension.js",
 	"contributes": {
+		"viewsContainers": {
+			"activitybar": [
+				{
+					"id": "book-contents",
+					"title": "Writers",
+					"icon": "media/book.svg"
+				}
+			]
+		},
+		"views": {
+			"book-contents": [
+				{
+					"id": "bookContents",
+					"name": "Contents"
+				},
+				{
+					"id": "bookTimeline",
+					"name": "Time Line"
+				}
+			]
+		},
 		"commands": [
 			{
-				"command": "extension.helloWorld",
-				"title": "Hello World"
+				"command": "extension.createBook",
+				"title": "Create Book"
 			}
 		]
 	},
@@ -38,5 +60,8 @@
 		"typescript": "^3.3.1",
 		"tslint": "^5.12.1",
 		"vscode-test": "^1.0.0-next.0"
+	},
+	"dependencies": {
+		"jsonc-parser": "^2.1.0"
 	}
 }
